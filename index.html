@@ -1,1 +1,191 @@
-<!DOCTYPE html><html lang="ja"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>test</title></head><body>    <h1>テスト！</h1>    <p>テステス</p></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>すぐわかる！ ぷよぷよプログラミング SEGA公式ガイドブック | サポートページ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Noto Sans JP) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* フォントとスムーズスクロールの設定 */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ヘッダー -->
+    <header class="bg-white border-b shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">
+                        すぐわかる！ ぷよぷよプログラミング　SEGA公式ガイドブック
+                        <br class="hidden sm:inline"> サポートページ
+                    </h1>
+                    <p class="mt-1 text-md text-gray-600">このサイトでは書籍『すぐわかる！ ぷよぷよプログラミング　SEGA公式ガイドブック』に関する情報、訂正情報などを掲載します。</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="https://gihyo.jp/book/2025/978-4-297-14760-0" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 duration-300 shadow-md">
+                        本書の書誌情報ページへ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ページ内ナビゲーション -->
+    <nav class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-10">
+        <div class="container mx-auto px-4 sm:px-6">
+            <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm sm:text-base justify-center py-3">
+                <li><a href="#introduction" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200">書誌情報</a></li>
+                <li><a href="#news" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200">お知らせ</a></li>
+                <li><a href="#code" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200">コード関連</a></li>
+                <li><a href="#exercise" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200">演習問題関連</a></li>
+                <li><a href="#errata" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200">正誤情報</a></li>
+                <li><a href="#contact" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200">連絡先</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="container mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div class="max-w-4xl mx-auto space-y-12">
+
+            <!-- 書誌情報 -->
+            <section id="introduction" class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <h2 class="text-xl font-bold border-b-2 border-gray-200 pb-3 mb-6">書誌情報</h2>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="md:w-1/3 flex-shrink-0 mx-auto md:mx-0">
+                        <img src="./images/9784297147600-3D.png" alt="書籍「すぐわかる！ ぷよぷよプログラミング SEGA公式ガイドブック」の書影" class="w-full max-w-[200px] md:max-w-full mx-auto rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x560/e2e8f0/334155?text=書影';">
+                    </div>
+                    <div class="md:w-2/3 space-y-6 text-gray-700">
+                        <!-- 基本情報 -->
+                        <div class="space-y-3">
+                            <div class="flex">
+                                <span class="font-bold w-20 flex-shrink-0">タイトル：</span>
+                                <span>すぐわかる！ ぷよぷよプログラミング<br class="hidden sm:inline">SEGA公式ガイドブック</span>
+                            </div>
+                            <div class="flex"><span class="font-bold w-20 flex-shrink-0">シリーズ：</span><span>Tech × Books plus</span></div>
+                            <div class="flex"><span class="font-bold w-20 flex-shrink-0">著者　　：</span><span>紀平 拓男、株式会社セガ［協力］</span></div>
+                            <div class="flex"><span class="font-bold w-20 flex-shrink-0">出版社　：</span><span>技術評論社</span></div>
+                            <div class="flex"><span class="font-bold w-20 flex-shrink-0">ページ数：</span><span>224ページ</span></div>
+                        </div>
+                        <!-- リンク -->
+                        <div class="space-y-4 pt-4 border-t">
+                            <div>
+                                <a href="https://gihyo.jp/book/2025/978-4-297-14760-0" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-semibold">出版社ページ・目次：</a>
+                                <p class="text-sm text-gray-500 mt-1 pl-2">本書サンプルページなども見ることができます。</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">オンライン書店：</p>
+                                <div class="flex flex-wrap gap-x-4 gap-y-2 mt-2 pl-2">
+                                    <a href="https://www.amazon.co.jp/o/ASIN/4297147602" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Amazon</a>
+                                    <span><a href="https://books.rakuten.co.jp/rb/18131288/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">楽天ブックス</a>（<a href="https://books.rakuten.co.jp/rb/18131289/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">楽天ブックス限定特典つき</a>）</span>
+                                    <a href="https://www.maruzenjunkudo.co.jp/products/9784297147600" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">丸善ジュンク堂</a>
+                                    <span><a href="https://www.yodobashi.com/product/100000009004143325/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">ヨドバシ.com</a>（<a href="https://www.yodobashi.com/product/100000001009284198/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">数量限定サイン本</a>）</span>
+                                    <p class="text-sm text-gray-500 mt-1 pl-2">▶︎電子版取り扱い・直販については<a href="https://gihyo.jp/book/2025/978-4-297-14760-0" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-semibold">出版社ページ</a>へ。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- お知らせ -->
+            <section id="news" class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <h2 class="text-xl font-bold border-b-2 border-gray-200 pb-3 mb-6">お知らせ</h2>
+                <div class="space-y-4">
+                    <!-- 
+                    <div class="text-gray-700">
+                        <p class="font-semibold text-gray-800">2025-08-08</p>
+                        <ul class="list-disc list-inside mt-1 pl-2 space-y-1">
+                            <li>書籍が発売日されました。</li>
+                        </ul>
+                    </div>
+                    -->
+                   <div class="text-gray-700">
+                        <p class="font-semibold text-gray-800">2025-08</p>
+                        <ul class="list-disc list-inside mt-1 pl-2 space-y-1">
+                            <li>サポートページを公開しました。</li>
+                        </ul>
+                    </div>
+                    <div class="text-gray-700">
+                        <p class="font-semibold text-gray-800">2025-07</p>
+                        <ul class="list-disc list-inside mt-1 pl-2 space-y-1">
+                            <li><a href="https://gihyo.jp/book/topics/2025/392" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">発売記念イベントのお知らせ</a>（出版社ページの更新）</li>
+                            <li><a href="https://gihyo.jp/book/topics/2025/390" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">数量限定・特典クリアカードのお知らせ</a>（出版社ページの更新）</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- コード関連 -->
+            <section id="code" class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <h2 class="text-xl font-bold border-b-2 border-gray-200 pb-3 mb-6">コード関連</h2>
+                <p class="mb-6 leading-relaxed">
+                    本書で掲載しているソースコードは、<a href="https://edu.monaca.io/puyo" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">「ぷよぷよプログラミング」サポートページ</a>に掲載されている「『すぐわかる！ ぷよぷよプログラミング SEGA公式ガイドブック』のプロジェクト紹介」コーナーからインポートできます。詳しくは書籍内のSTAGE 2などをご確認ください。
+                </p>
+                <a href="https://edu.monaca.io/puyo" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 duration-300 shadow-md">
+                    「ぷよぷよプログラミング」サポートページへ
+                </a>
+            </section>
+
+            <!-- 演習問題関連 -->
+            <section id="exercise" class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <h2 class="text-xl font-bold border-b-2 border-gray-200 pb-3 mb-6">演習問題関連</h2>
+                <p class="text-gray-600">※準備中です。</p>
+            <!-- 
+                <p class="mb-6 leading-relaxed">
+                    本書で掲載している演習問題「改造に挑戦！」の解答例は、以下からインポートできます。
+                </p>
+                <a href="./monaca_exports.html●●出版社の書誌ページ直下のサポートページへ変更する●●" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-transform transform hover:scale-105 duration-300 shadow-md">
+                    演習問題の解答例を見る
+                </a>
+            -->
+            </section>
+
+            <!-- 正誤情報 -->
+            <section id="errata" class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <h2 class="text-xl font-bold border-b-2 border-gray-200 pb-3 mb-6">正誤情報</h2>
+                <p class="text-gray-600">※準備中です。</p>
+                <!-- 
+                <p class="mb-6">正誤情報・補足情報は以下に掲載しています。</p>
+                <a href="./errata.md" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-transform transform hover:scale-105 duration-300 shadow-md">
+                    正誤情報を見る
+                </a>
+                -->
+            </section>
+
+            <!-- 連絡先 -->
+            <section id="contact" class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                <h2 class="text-xl font-bold border-b-2 border-gray-200 pb-3 mb-6">連絡先</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><a href="https://gihyo.jp/site/inquiry" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">お問い合わせフォーム（出版社サイト）</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-200 border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-sm text-gray-600">
+            <p>&copy; 2025 Takuo Kihira, SEGA CORPORATION. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
