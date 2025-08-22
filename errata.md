@@ -14,7 +14,7 @@
 ### p.69　232行目
 
 - **誤**：`eraseStartFrame`
-- **正**：`eraseStartFrame`
+- **正**：`erasingStartFrame`
   - （補足）p.63　コード6.3の6行目`erasingStartFrame` ←正しい
   - （補足）両方間違えていたのでたまたま動いてしまった
 
